@@ -1,0 +1,21 @@
+<apex:page standardController="Contact">
+    <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>SLDS CloseOpportunity Page in Salesforce Mobile</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            
+            <apex:slds /> <!-- Import the Design System style sheet -->
+    </head>
+
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="Contact" fields="Id,Name"/>
+    </apex:remoteObjects>
+
+    <body>
+        <h1>Show Assistant Info</h1>
+        <p>{!Contact.AssistantName}</p>
+        <p><a href="tel:{!Contact.AssistantPhone}">{!Contact.AssistantPhone}</a></p>
+    </body>
+
+</apex:page>

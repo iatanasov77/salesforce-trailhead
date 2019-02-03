@@ -1,0 +1,12 @@
+<apex:page docType="html-5.0" standardController="Opportunity">
+    <head></head>
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="Opportunity" fields="Id,Name,StageName"/>
+    </apex:remoteObjects>
+    <body>
+        <h1>Opportunity Stage Tips</h1>
+        <p>{! Opportunity.Name }</p>
+        
+        <p>Stage: {! Opportunity.StageName }</p>
+    </body>
+</apex:page>
